@@ -37,9 +37,9 @@ fun HistoryScreen(geminiViewModel: GeminiViewModel) {
     // Collecte les données du Flow dans une coroutine
     LaunchedEffect(Unit) {
         geminiViewModel.viewModelScope.launch {
-            geminiViewModel.getHistory().collect { history ->
-                historyItems.value = history
-            }
+//            geminiViewModel.getHistory().collect { history ->
+//                historyItems.value = history
+//            }
         }
     }
 

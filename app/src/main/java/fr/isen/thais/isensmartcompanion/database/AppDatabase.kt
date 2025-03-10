@@ -5,11 +5,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import fr.isen.thais.isensmartcompanion.dao.HistoryDao
+import fr.isen.thais.isensmartcompanion.model.ChatEntry
 import fr.isen.thais.isensmartcompanion.model.ConversationEntity
+import fr.isen.thais.isensmartcompanion.model.HistoryItem
 
 @Database(entities = [ConversationEntity::class], version = 1, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun conversationDao(): HistoryDao
+    //abstract fun conversationDao(): ConversationEntity
 
     companion object {
         @Volatile
