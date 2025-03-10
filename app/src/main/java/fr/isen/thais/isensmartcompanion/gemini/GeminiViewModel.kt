@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
 
-class GeminiViewModel(private val historyRepository: HistoryRepository) : ViewModel() {
+class GeminiViewModel() : ViewModel() {
 
     private val _response = MutableStateFlow<String?>(null)
     val response = _response.asStateFlow()
@@ -55,11 +55,11 @@ class GeminiViewModel(private val historyRepository: HistoryRepository) : ViewMo
 
         // Save historyItem to the database
         viewModelScope.launch {
-            historyRepository.insertHistoryItem(historyItem)
+            //historyRepository.insertHistoryItem(historyItem)
         }
     }
 
-    fun getHistory(): Flow<List<HistoryItem>> {
-        return historyRepository.getAllHistoryItems()
-    }
+//    fun getHistory(): Flow<List<HistoryItem>> {
+//        return historyRepository.getAllHistoryItems()
+//    }
 }

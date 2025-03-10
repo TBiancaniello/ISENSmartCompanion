@@ -114,7 +114,7 @@ class MainActivity : ComponentActivity() {
                             )
                         }
                         composable(historyTab.title) {
-                            HistoryScreen(innerPadding)
+                            //HistoryScreen(innerPadding)
                         }
                         //Adding the route for the Gemini screen
                         composable("gemini_screen") {

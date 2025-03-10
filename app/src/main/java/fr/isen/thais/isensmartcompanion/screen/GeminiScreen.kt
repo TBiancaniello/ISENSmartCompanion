@@ -6,10 +6,10 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import fr.isen.thais.isensmartcompanion.gemini.GeminiViewModel
+import fr.isen.thais.isensmartcompanion.gemini.viewmodel.GeminiViewModel
 
 @Composable
-fun GeminiScreen(viewModel: GeminiViewModel = viewModel()) {
+fun GeminiScreen(viewModel: GeminiViewModel = GeminiViewModel()) {
     var userInput by remember { mutableStateOf("") }
     val response by viewModel.response.collectAsState()
 
